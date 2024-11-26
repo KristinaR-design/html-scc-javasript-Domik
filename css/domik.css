@@ -32,17 +32,15 @@ body {
     background:no-repeat top center;
     background-size: CONTAIN;
     mask-image: linear-gradient(#eee 3%, #eef calc(60%), transparent calc(100%), transparent calc(80% + 30px), #eef calc(60%), #eee 100%);
-
 }
 
-#img1, #img2, #img3, #img4  {
-    width: 400px; 
+#img1, #img2, #img3, #img4 {
+    width: 100%; 
     height: 500px; 
     object-fit: cover; 
-     border-radius: 10px;  /*Скруглила края смотрится побаще))) */
+    border-radius: 10px;  /*Скруглила края смотрится побаще))) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для визуального эффекта */
-  }
-
+}
 
 .header p {
     padding-right: 50px;
@@ -59,8 +57,6 @@ body {
     text-align: right 
 }
 
-
-
 .card img {
     width: 390px;
 }
@@ -70,56 +66,33 @@ body {
 }
 
 .card {
-    padding-top: 500px;
+    padding: 10px;
     background-color: #fcf4f400;
     border-radius: 5px;
     overflow: hidden;
     text-align: center;
     display: inline-block;
-    padding: 20px;
-  }
+    border-color: transparent;
+ }
 
-.textcolor, .price, .btn{
+.textcolor{
+    color: #eee;
+    height: 60px;
+}
+  
+.price, .btn{
     color: #eee;
 }
 
-
-/* Таблица с домиками */
-
-table {
-    top: 50px;
-    position: relative;
-    width: 100%; 
-    border-collapse: collapse; 
-}
-
-td {
-    text-align: center; 
-    vertical-align: top; 
-    padding: 50px; 
-}
-
-
  /* Анимированная кнопка */
-.container {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .center {
+
+.center {
     width: 180px;
     height: 60px;
     position: absolute;
-  }
+}
   
-  .btn {
+.btn {
     width: 180px;
     height: 60px;
     cursor: pointer;
@@ -127,9 +100,9 @@ td {
     border: 1px solid #f8bc68;
     outline: none;
     transition: 1s ease-in-out;
-  }
+}
   
-  svg {
+svg {
     position: absolute;
     left: 0;
     top: 0;
@@ -138,46 +111,47 @@ td {
     stroke-dasharray: 150 480;
     stroke-dashoffset: 150;
     transition: 1s ease-in-out;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     transition: 1s ease-in-out;
     background: #f8bc68;
-  }
-  
- 
-  
+}
 
+.for-faq {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 
-
-  /* Часто задаваемые вопросы */
-  .faq-container {
+/* Часто задаваемые вопросы */
+.faq-container {
     width: 90%;
-    max-width: 66%; 
     padding: 20px;
     border-radius: 10px;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
-    position: absolute;
-    top: 550%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  h1 {
+    /* position: relative; */
+    /* top: 550%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* max-width: 66%;  */
+}
+
+h1 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
     color: #fff;
-  }
-  
-  .faq-item {
+}
+
+.faq-item {
     border: 1px solid #555;
     margin-bottom: 10px;
     border-radius: 5px;
     overflow: hidden;
-  }
-  
-  .faq-question {
+}
+
+.faq-question {
     background-color: #444;
     padding: 15px;
     display: flex;
@@ -185,27 +159,23 @@ td {
     align-items: center;
     cursor: pointer;
     color: #fff;
-  }
-  
-  .faq-question:hover {
+}
+
+.faq-question:hover {
     background-color: #555;
-  }
-  
-  .faq-answer {
+}
+
+.faq-answer {
     background-color: #222;
     padding: 15px;
     display: none; 
     color: #fff;
-  }
-  
-  .faq-toggle {
+}
+
+.faq-toggle {
     font-size: 18px;
     font-weight: bold;
-  }
-
-
-
-
+}
 
   
 
@@ -219,8 +189,12 @@ td {
         font-size: 30px;
     }
 
+    .parent{
+        min-height: 800px;
+    }
+
     #tree_picture{
-        position: absolute;
+        position:absolute;
         height: 800px;
         left: -150px;
         margin-top: 40px;
@@ -236,6 +210,7 @@ td {
         line-height: 1.8; 
         font-size: 1.8em;
     }
+
     #main_content2{
         position: relative;
         color:  #eee;
@@ -250,17 +225,17 @@ td {
         width: 390px;
     }
 
-    .faq-container {
+    /* .faq-container {
         width: 90%;
         max-width: 66%;
         padding: 20px;
         border-radius: 10px;
-        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
-        position: absolute;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
         top: 550%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
+      } */
 }
 
 @media (min-width: 767px) and (max-width: 1199px){
@@ -270,6 +245,10 @@ td {
 
     .header p {
         font-size: 20px;
+    }
+
+    .parent{
+        min-height: 600px;
     }
 
     #tree_picture{
@@ -303,17 +282,18 @@ td {
         width: 250px;
     }
 
-    .faq-container {
+    /* .faq-container {
         width: 90%;
         max-width: 66%; 
         padding: 20px;
         border-radius: 10px;
-        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */ 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
         position: absolute;
         top: 500% ;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
+      } */
+
 }
 
 @media (max-width: 767px){
@@ -323,6 +303,10 @@ td {
 
     .header p {
         font-size: 14px;
+    }
+
+    .parent{
+        min-height: 500px;
     }
 
     #tree_picture{
@@ -354,15 +338,16 @@ td {
         width: 150px;
     }
 
-    .faq-container {
+    /* .faq-container {
         width: 90%;
         max-width: 66%; 
         padding: 20px;
         border-radius: 10px;
-        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */ 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
         position: absolute;
         top: 400%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
+      } */
 }
+
