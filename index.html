@@ -16,10 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
 
     <!-- Шрифт -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,19 +25,14 @@
 
 
     <!-- Customized Bootstrap Stylesheet -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
-
-
-
-
-
+    <link href="css/domik.css" rel="stylesheet">
 </head>
 
 <body>
-    <img id="image" src="/img/IMG_1466domik.JPG"></img>
+    <img id="image" src="img/IMG_1466domik.JPG"></img>
 
 
     <div class="content">
@@ -51,10 +42,9 @@
             <h1><b>Near the river</b></h1>
             <p>Cozy getaway in nature — come and immerse yourself in the peaceful silence! <br></p>
         </header>
-
     </div>
 
-    <div>
+    <div class="parent">
         <img id="tree_picture" src="img/ELb.png"></img>
         <p id="main_content1"><br>Imagine a cozy place nestled in the heart of the mountains, where time slows down, and
             nature surrounds you at every turn. Our cabins, located right by the river, are perfect for those looking to
@@ -70,93 +60,83 @@
             haven in nature will give you unforgettable memories, energy, and inner peace.</p>
     </div>
 
-    <br>
-    <br>
+    <br><br>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card col-xl-3 col-md-6 col-sm-12">
+                <img src="img/IMG_1479.JPG" alt="Маленький домик" id="img1" onclick="changeImg()">
+                <h3 class="textcolor">A small house for two</h3>
+                <p class="price">25 000 тг</p>
+                <button class="btn">More detailed</button>
+                <br>
+                <button class="btn">To book</button>
+            </div>
 
+            <div class="card col-xl-3 col-md-6 col-sm-12">
+                <img src="img/IMG_1480.JPG" alt="Большой домик" id="img2" onclick="changeImg2()">
+                <h3 class="textcolor">Large house for 4 people</h3>
+                <p class="price">40 000 тг</p>
+                <button class="btn">More detailed</button>
+                <br>
+                <button class="btn">To book</button>
+            </div>    
+            
+            <div class="card col-xl-3 col-md-6 col-sm-12">
+                <img src="img/DomikNa8.JPG" alt="Большой домик" id="img3" onclick="changeImg3()">
+                <h3 class="textcolor">Large house for 6 people</h3>
+                <p class="price">55 000 тг</p>
+                <button class="btn">More detailed</button>
+                <br>
+                <button class="btn">To book</button>
+            </div>
 
-
-    <table>
-        <tr>
-            <td>
-                <div class="card">
-                    <img src="img/IMG_1479.JPG" alt="Маленький домик" id="img1" onclick="changeImg()">
-                    <h3 class="textcolor">A small house for two</h3>
-                    <p class="price">25 000 тг</p>
-                    <button class="btn">More detailed</button>
-                    <br>
-                    <button class="btn">To book</button>
-                </div>
-            </td>
-            <td>
-                <div class="card">
-                    <img src="img/IMG_1480.JPG" alt="Большой домик" id="img2" onclick="changeImg2()">
-                    <h3 class="textcolor">Large house for 4 people</h3>
-                    <p class="price">40 000 тг</p>
-                    <button class="btn">More detailed</button>
-                    <br>
-                    <button class="btn">To book</button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="card">
-                    <img src="img/DomikNa8.JPG" alt="Большой домик" id="img3" onclick="changeImg3()">
-                    <h3 class="textcolor">Large house for 6 people</h3>
-                    <p class="price">55 000 тг</p>
-                    <button class="btn">More detailed</button>
-                    <br>
-                    <button class="btn">To book</button>
-                </div>
-            </td>
-            <td>
-                <div class="card">
-                    <img src="img/VesYchastok.JPG" alt="Большой домик" id="img4" onclick="changeImg4()" >
-                    <h3 class="textcolor">The whole plot is for 8 people</h3>
-                    <p class="price">80 000</p>
-                    <button class="btn">More detailed</button>
-                    <br>
-                    <button class="btn">To book</button>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-
-
-
-    <div class="faq-container">
-        <h1>Частые вопросы</h1>
-        <div class="faq-item">
-          <div class="faq-question">
-            Во сколько въезд и выезд?
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">Въезд с 14:00, выезд до 12:00.</div>
+            <div class="card col-xl-3 col-md-6 col-sm-12">
+                <img src="img/VesYchastok.JPG" alt="Большой домик" id="img4" onclick="changeImg4()" >
+                <h3 class="textcolor">The whole plot is for 8 people</h3>
+                <p class="price">80 000 тг</p>
+                <button class="btn">More detailed</button>
+                <br>
+                <button class="btn">To book</button>
+            </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            С животными можно?
-            <span class="faq-toggle">+</span>
+    </div>
+
+    <div class="for-faq">
+        <div class="faq-container">
+            <h1>Частые вопросы</h1>
+            <div class="faq-item">
+              <div class="faq-question">
+                Во сколько въезд и выезд?
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">Въезд с 14:00, выезд до 12:00.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                С животными можно?
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">В наши домики можно с животными маленького и среднего размера, при условии, что вы берете на себя ответственность за сохранение имущества и чистоту после вашего питомца. Стоимость пребывания питомца в домиках - 5000 тенге. С питомцем можно в домики, но запрещено брать в баню.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                Как добраться?
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">Наш адрес: г. Алматы, ул. Тажиева, 659.<br><a href="https://2gis.kz/almaty/geo/70000001075338173 ">Ссылка на навигатор</a></div>
+             
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                Как с вами связаться?
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">Позвоните нам по номеру: +7 (123) 456-78-90.</div>
+            </div>
           </div>
-          <div class="faq-answer">В наши домики можно с животными маленького и среднего размера, при условии, что вы берете на себя ответственность за сохранение имущества и чистоту после вашего питомца. Стоимость пребывания питомца в домиках - 5000 тенге. С питомцем можно в домики, но запрещено брать в баню.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            Как добраться?
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">Наш адрес: г. Алматы, ул. Тажиева, 659.<br><a href="https://2gis.kz/almaty/geo/70000001075338173 ">Ссылка на навигатор</a></div>
-         
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            Как с вами связаться?
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">Позвоните нам по номеру: +7 (123) 456-78-90.</div>
-        </div>
-      </div>
+    </div>
+    
 
 
 
