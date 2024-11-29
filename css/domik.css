@@ -127,7 +127,6 @@ svg {
 /* Часто задаваемые вопросы */
 .faq-container {
     width: 90%;
-    padding: 20px;
     border-radius: 10px;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
     /* position: relative; */
@@ -177,10 +176,65 @@ h1 {
     font-weight: bold;
 }
 
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
+.all-headers{
+    color: #eef;
+    font-family: "Sour Gummy", sans-serif;
+    text-align: center
+}
+
+.review{
+    width: 60%;
+}
+
+.review-parent-container{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.review-container{
+    border-radius: 10px;
+    background-color: rgb(22,133,80);
+    margin-top: 10px;
+}
+
+.review-img{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.rev-img{
+    width: 80%;
+}
+
+.review-name{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 3em;
+}
+
+.review-text{
+    color:  #eee;
+    text-align:justify;
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.8em;
+    font-family: 'Franklin Gothic Small', 'Arial Narrow', Arial, sans-serif;
+}
 
 @media (min-width: 1200px){
     .header h1 {
+        font-size: 80px;
+    }
+
+    .all-headers{
         font-size: 100px;
     }
 
@@ -240,6 +294,11 @@ h1 {
 
 @media (min-width: 767px) and (max-width: 1199px){
     .header h1 {
+        font-size: 60px;
+    }
+
+    
+    .all-headers{
         font-size: 80px;
     }
 
@@ -298,6 +357,10 @@ h1 {
 
 @media (max-width: 767px){
     .header h1 {
+        font-size: 50px;
+    }
+    
+    .all-headers{
         font-size: 60px;
     }
 
@@ -322,7 +385,7 @@ h1 {
         text-align: right;
         padding-right: 50px;
         margin-left: 20%;
-        line-height: 1.8; 
+        font-size: 14px;
     }
 
     #main_content2{
@@ -331,7 +394,7 @@ h1 {
         text-align: right;
         padding-right: 50px;
         margin-left: 25%;
-        line-height: 1.8; 
+        font-size: 14px;
     }
 
     .card img {
@@ -351,3 +414,66 @@ h1 {
       } */
 }
 
+@media (max-width: 400px){
+    .header h1 {
+        font-size: 50px;
+    }
+    
+    .all-headers{
+        font-size: 60px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .parent{
+        min-height: 500px;
+    }
+
+    #tree_picture{
+        position: absolute;
+        height: 480px;
+        left: -170px;
+        margin-top: 10px;
+    }
+
+    #main_content1{
+        position: relative;
+        color:  #eee;
+        text-align: right;
+        padding-right: 50px;
+        margin-left: 30%;
+        margin-top: 10%;
+        font-size: 13px;
+    }
+
+    #main_content2{
+        font-size: 0px;
+        color: transparent;
+    }
+
+    .card img {
+        width: 150px;
+    }
+
+    #image{
+        height: 300px;
+    }
+
+    .review-name{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 2.5em;
+    }
+    
+    .review-text{
+        color:  #eee;
+        text-align:left;
+        padding: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1.4em;
+        font-family: 'Franklin Gothic Small', 'Arial Narrow', Arial, sans-serif;
+    }
+}
