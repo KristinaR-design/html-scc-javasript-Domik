@@ -32,6 +32,32 @@
 </head>
 
 <body>
+
+  <header>
+    <nav id="header-nav" class="navbar navbar-dark">
+      
+
+        <button class="button-menu navbar-toggler d-block d-lg-none d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul id="nav-list" class="nav-link nav navbar-nav navbar-right">
+              <li>
+                  <a class="nav-link li_item">Home</a>
+              </li>
+              <li>
+                  <a class="nav-link li_item">About</a>
+              </li>
+              <li>
+                  <a class="nav-link li_item">Additional</a>
+              </li>
+          </ul>
+        </div>
+      
+    </nav>
+  </header>
+
+
   <img id="image" src="img/IMG_1466domik.JPG"></img>
 
 
@@ -68,38 +94,80 @@
         <img src="img/IMG_1479.JPG" alt="Маленький домик" id="img1" onclick="changeImg()">
         <h3 class="textcolor">A small house for two</h3>
         <p class="price">25 000 тг</p>
-        <button class="btn">More detailed</button>
+        <button class="details-btn" data-room = "room1">More detailed</button>
         <br>
-        <button class="btn">To book</button>
+        <button class="btn"  id="btn">To book</button>
       </div>
 
       <div class="card col-xl-3 col-md-6 col-sm-12">
         <img src="img/IMG_1480.JPG" alt="Большой домик" id="img2" onclick="changeImg2()">
         <h3 class="textcolor">Large house for 4 people</h3>
         <p class="price">40 000 тг</p>
-        <button class="btn">More detailed</button>
+        <button class="details-btn" data-room = "room2">More detailed</button>
         <br>
-        <button class="btn">To book</button>
+        <button class="btn"  id="btn">To book</button>
       </div>
 
       <div class="card col-xl-3 col-md-6 col-sm-12">
         <img src="img/DomikNa8.JPG" alt="Большой домик" id="img3" onclick="changeImg3()">
         <h3 class="textcolor">Large house for 6 people</h3>
         <p class="price">55 000 тг</p>
-        <button class="btn">More detailed</button>
+        <button class="details-btn" data-room = "room3">More detailed</button>
         <br>
-        <button class="btn">To book</button>
+        <button class="btn" id="btn">To book</button>
       </div>
 
       <div class="card col-xl-3 col-md-6 col-sm-12">
         <img src="img/VesYchastok.JPG" alt="Большой домик" id="img4" onclick="changeImg4()">
         <h3 class="textcolor">The whole plot is for 8 people</h3>
         <p class="price">80 000 тг</p>
-        <button class="btn">More detailed</button>
+        <button class="details-btn" data-room = "room4">More detailed</button>
         <br>
-        <button class="btn">To book</button>
+        <button class="btn"  id="btn">To book</button>
       </div>
     </div>
+  </div>
+
+  <br>
+
+
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="photos">
+        <img id="currentPhoto" src="" alt="Фото номера" class="main-photo">
+      </div>
+      <div class="gallery-controls">
+        <button id="prevPhoto" class="gallery-btn">←</button>
+        <button id="nextPhoto" class="gallery-btn">→</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="bookModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeBookingModel">&times;</span>
+      <p class="textforbooking" >
+        
+        🌟 У нас для вас отличные новости! 🌟
+        <br>
+        <br>
+        
+        Хотите забронировать уютный домик у реки? Это легко сделать!
+        <br> Просто напишите нам в Instagram 📲  <a href="https://www.instagram.com/domik.u.reki?igsh=emNmZ3g3eXV6Z20w">@domik.u.reki</a>, <br>
+        отправьте сообщение в WhatsApp по номеру 📱 <a href="wa.me/77476875149">+7 747 687 5149</a>,
+        <br>
+         или позвоните на мобильный 🚀 +7(747)687-51-49.
+        <br>
+        <br>
+        Мы всегда рады помочь и ответить на все ваши вопросы! 🏡💬 
+        <br>
+        Не упустите шанс провести незабываемое время на природе! 🌅
+      </p>
+     
+    </div>
+
   </div>
 
   <br>
@@ -171,13 +239,60 @@
     </div>
 
   </div>
-  </div>
+  </br>
 
+  <img src="img/mountain.PNG" alt="mountains" class="mountains">
 
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Daily from 10:00 to 22:00<br><br>
+          <span>Phone:</span><br>
+          +7 747 687 51 49
+        </section>
+
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          Tazhieva Street, 659<br>
+          ST Alma, Nauryzbay district, Almaty
+        </section>
+
+        <section id="testimonials" class="col-sm-4">
+          <p id="social">Social's</p>
+          
+          <a href="https://www.instagram.com/domik.u.reki?igsh=emNmZ3g3eXV6Z20w" id="social_links">
+            <img src="img/instagram.png" alt="instagram" id="foot_img_inst">
+            <div href="" id="foot_text"><b>INSTAGRAM</b></div>
+          </a>
+          
+          <a href="https://clck.ru/3EuuDj" id="social_links" class="what">
+            <img src="img/whatsapp.png" alt="instagram" id="foot_img_whatsapp">
+            <div href="" id="foot_text"><b>WHATSAPP</b></div>
+          </a>
+
+          <a href="https://www.instagram.com/domik.u.reki?igsh=emNmZ3g3eXV6Z20w" id="social_links">
+            <img src="img/instagram.png" alt="instagram" id="foot_img_inst">
+            <div href="" id="foot_text"><b>INSTAGRAM</b></div>
+          </a>
+          
+        </section>
+      </div>
+      <hr class="visible-xs">
+      <div class="text-center">&copy; Near the river 2024</div>
+    </div>
+  </footer>
 
 
 
   <script src="js/index.js"></script>
+
+  <script src="bootstrap-5.3.3-dist/js/jquery-2.1.4.min.js"></script>
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script src="bootstrap-5.3.3-dist/js/ajax-utils.js"></script>
+  <script src="bootstrap-5.3.3-dist/js/script.js"></script>
+
   </div>
 </body>
 

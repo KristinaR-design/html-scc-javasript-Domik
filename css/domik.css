@@ -18,16 +18,65 @@ body {
     
 }
 
-/* .header {
-    position: relative;
-    text-align: center;
-    background: #a2d2ff;
-    padding: 20px;
-    color: #fff;
-} */
+#header-nav {
+    background-color: #222;
+    border-radius: 0;
+    border: 0;
+    color: #eee;
+}
+
+.button-menu{
+    margin-left: 30px;
+}
+
+.container-align{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin: 0px;
+    width: 100%;
+}
+
+#menu {
+    text-align:center;
+    margin-top: 5%;
+}
+
+
+#navbarScroll {
+    justify-content: left;
+    width: 40%;
+    float: left;
+    clear: both;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.li_item {
+    margin: -1px;
+    text-align: center;    
+    width: 16%;
+    border-radius: 5px;
+
+}
+
+.li_item:hover, .li_item:focus {
+        cursor: pointer;
+        background-color:#9e9965;
+        justify-content: space-around;
+}
+
+.navbar-header {
+    width:100%;
+}
+
+.navbar-toggler {
+    float:right;
+    margin-right:1%;
+}
 
 #image {
-     width: 100%; 
+    width: 100%; 
     height: 100%;
     background:no-repeat top center;
     background-size: CONTAIN;
@@ -80,9 +129,12 @@ body {
     height: 60px;
 }
   
-.price, .btn{
+.price, .btn, .details-btn{
     color: #eee;
 }
+
+
+
 
  /* Анимированная кнопка */
 
@@ -92,7 +144,7 @@ body {
     position: absolute;
 }
   
-.btn {
+.btn, .details-btn {
     width: 180px;
     height: 60px;
     cursor: pointer;
@@ -113,27 +165,23 @@ svg {
     transition: 1s ease-in-out;
 }
   
-.btn:hover {
+.btn:hover, .details-btn:hover {
     transition: 1s ease-in-out;
     background: #f8bc68;
 }
 
+
+
+/* Часто задаваемые вопросы */
 .for-faq {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-/* Часто задаваемые вопросы */
 .faq-container {
     width: 90%;
     border-radius: 10px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
-    /* position: relative; */
-    /* top: 550%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    /* max-width: 66%;  */
 }
 
 h1 {
@@ -188,6 +236,8 @@ h1 {
     text-align: center
 }
 
+
+/* Отзывы */
 .review{
     width: 60%;
 }
@@ -210,7 +260,7 @@ h1 {
 }
 
 .rev-img{
-    width: 80%;
+    width: 60%;
 }
 
 .review-name{
@@ -229,7 +279,162 @@ h1 {
     font-family: 'Franklin Gothic Small', 'Arial Narrow', Arial, sans-serif;
 }
 
+.mountains{
+    width: 101%;
+    margin-top: 30px;
+}
+
+/* FOOTER */
+.panel-footer {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #222;
+    border-top: 0;
+    color: #eee;
+}
+.panel-footer div.row {
+    margin-bottom: 35px;
+}
+#hours, #address {
+    line-height: 2;
+}
+#hours > span, #address > span {
+    font-size: 1.3em;
+}
+#address p {
+    color: #557c3e;
+    font-size: .8em;
+    line-height: 1.8;
+}
+#testimonials {
+    font-style: italic;
+}
+#testimonials p:nth-child(2) {
+    margin-top: 25px;
+}
+
+#social{
+    font-size: 25px;
+    text-align: center;
+}
+
+#social_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+#foot_img_inst{
+    width: 8%;
+    position: relative;
+    margin-right: 2px;
+}
+
+#foot_img_whatsapp{
+    width: 6%;
+    position: relative;
+    margin-right: 6px;
+}
+
+#foot_text{
+    position: relative;
+    color: #eee;
+}
+
+
+
+
+
+/* Открывающееся окно с фотографиями */
+.modal {
+    display: none;
+    position: fixed;
+    top: 10%; 
+    left: 27%; 
+    width: 50%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* полупрозрачный фон */
+  }
+  
+  .modal-content {
+    background-color: #ffffff00;
+    padding: 0; 
+    border-radius: 0; 
+    max-width: 100vw;  
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .photos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 90%; 
+    height: 90%; 
+  }
+  
+  .main-photo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+  }
+  
+  .gallery-controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .gallery-btn {
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .gallery-btn:hover {
+    background-color: #4c4c4c;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+    color: #727171;
+    z-index: 10;
+  }
+
+  .textforbooking{
+    color: white;
+    padding: 50px;
+  }
+
 @media (min-width: 1200px){
+
+    #img{
+        width: 450px;
+    }
+
     .header h1 {
         font-size: 80px;
     }
@@ -278,18 +483,44 @@ h1 {
     .card img {
         width: 390px;
     }
+/* Окно фотографий */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 10%; 
+        left: 27%; 
+        width: 50%;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8); /* полупрозрачный фон */
+    }
 
-    /* .faq-container {
-        width: 90%;
-        max-width: 66%;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        position: relative;
-        top: 550%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      } */
+
+    .gallery-btn {
+        padding: 10px 20px;
+        font-size: 24px;
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+    }
+      
+    .gallery-btn:hover {
+        background-color: #4c4c4c;
+    }
+      
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 36px;
+        cursor: pointer;
+        color: #727171;
+        z-index: 10;
+    }
 }
 
 @media (min-width: 767px) and (max-width: 1199px){
@@ -337,25 +568,70 @@ h1 {
         font-size: 1.2em; 
     }
 
+    .card{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
     .card img {
         width: 250px;
     }
 
-    /* .faq-container {
-        width: 90%;
-        max-width: 66%; 
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-        position: absolute;
-        top: 500% ;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      } */
 
+     /* Окно фотографий */
+
+     .modal {
+        display: none;
+        position: fixed;
+        top: 10%; 
+        left: 27%; 
+        width: 60%;
+        height: 60%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8); /* полупрозрачный фон */
+    }
+
+    .gallery-btn {
+        
+        padding: 10px 20px;
+        font-size: 24px;
+        background-color: #000000ec;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .close {
+        position: absolute;
+        top: 0.1px;
+        right: 10px;
+        font-size: 36px;
+        cursor: pointer;
+        color: #727171;
+        z-index: 10;
+    }
+    
+    .gallery-controls {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .gallery-btn:hover {
+        background-color: #606060e9;
+    }
 }
 
 @media (max-width: 767px){
+
+    
+
     .header h1 {
         font-size: 50px;
     }
@@ -397,21 +673,64 @@ h1 {
         font-size: 14px;
     }
 
+    .card{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
     .card img {
         width: 150px;
     }
+ /* Окно фотографий */
 
-    /* .faq-container {
-        width: 90%;
-        max-width: 66%; 
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    .modal {
+        display: none;
+        position: fixed;
+        top: 10%; 
+        left: 27%; 
+        width: 70%;
+        height: 60%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8); 
+    }
+
+    .gallery-btn {
+        
+        padding: 10px 20px;
+        font-size: 24px;
+        background-color: #000000ec;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .close {
         position: absolute;
-        top: 400%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      } */
+        top: 0.1px;
+        right: 10px;
+        font-size: 36px;
+        cursor: pointer;
+        color: #727171;
+        z-index: 10;
+    }
+    
+    .gallery-controls {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .gallery-btn:hover {
+        background-color: #464646e9;
+    }
+    
+
 }
 
 @media (max-width: 400px){
@@ -476,4 +795,81 @@ h1 {
         font-size: 1.4em;
         font-family: 'Franklin Gothic Small', 'Arial Narrow', Arial, sans-serif;
     }
+
+
+    #social{
+        font-size: 25px;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+    
+    #social_links{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-decoration: none;
+        margin-bottom: 4px;
+        margin-top: -5px;
+    }
+    
+    .what{
+        margin-left: 3px;
+    }
+
+    #foot_img_whatsapp{
+        width: 6%;
+        position: relative;
+        margin-right: 6px;
+    }
+
+    /* Окно фотографий */
+
+    .modal {
+         display: none;
+        position: fixed;
+        top: 10%; 
+        left: 27%; 
+        width: 70%;
+        height: 60%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8); /* полупрозрачный фон */
+    }
+
+    .gallery-btn {
+        
+        padding: 10px 20px;
+        font-size: 24px;
+        background-color: #00000000;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .close {
+        position: absolute;
+        top: 0.1px;
+        right: 10px;
+        font-size: 36px;
+        cursor: pointer;
+        color: #727171;
+        z-index: 10;
+    }
+    
+    .gallery-controls {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .gallery-btn:hover {
+        background-color: #4c4c4cc2;
+    }
+
 }
