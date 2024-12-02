@@ -23,6 +23,33 @@ body {
     border-radius: 0;
     border: 0;
     color: #eee;
+    justify-content: left;
+}
+
+.navbar-btn{
+    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none
+    
+}
+
+.navbar-btn:hover {
+    background-color: #555;
+}
+
+.v-line{
+    width: 1px;
+    background-color: #ccc;
+    height: 100%;
 }
 
 .button-menu{
