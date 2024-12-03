@@ -1,11 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
 
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
 .about-us-title-line{
     background-color:rgb(78, 86, 86);
 }
@@ -35,10 +29,8 @@ body, html {
 
 .bg-image{
     height: 500px;
-  
-    /* Фоновое изображение */
     background-image:url('../img/IMG_1466domik.JPG');
-    background-attachment: fixed; /* Ключ к параллаксу */
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

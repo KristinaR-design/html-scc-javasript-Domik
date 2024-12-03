@@ -216,6 +216,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const loadingOverlay = document.querySelector('.loading-overlay');
 
+  const loadCSS = (url) => {
+    const existingLink = document.querySelector(`link[href="${url}"]`);
+    if (!existingLink) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = url;
+      document.head.appendChild(link);
+    }
+  };
+
+
   const showLoadingOverlay = () => {
     loadingOverlay.style.opacity = '1';
   };
@@ -224,9 +235,11 @@ document.addEventListener("DOMContentLoaded", () => {
     loadingOverlay.style.opacity = '0';
   };
 
-  const loadScripts = (url) => {
-    if(url.includes('index')){
-  };}
+  const loadScriptsAndStyles = (url) => {
+    if (url.includes('index')) {
+    } else if (url.includes('about_us')) {
+    }
+  };
 
   const loadPage = (url) => {
     fetch(url)
@@ -235,18 +248,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
         const newContent = doc.querySelector('.main-content').innerHTML;
-        
+  
         contentDiv.innerHTML = newContent;
         document.title = doc.title;
-
+  
         setTimeout(() => {
-          history.pushState({}, '', url)
+          history.pushState({}, '', url);
         }, 500);
       })
       .then(() => {
-        loadScripts(url);
-      })
-  }
+        loadScriptsAndStyles(url); // Подключение скриптов и стилей
+      });
+  };
 
   navLinks.forEach(el =>{
     el.addEventListener('click', (e) => {
