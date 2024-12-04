@@ -269,6 +269,9 @@ h1 {
     width: 60%;
 }
 
+
+
+
 .review-parent-container{
     padding-left: 10px;
     padding-right: 10px;
@@ -277,7 +280,10 @@ h1 {
 .review-container{
     border-radius: 10px;
     background-color: rgb(22,133,80);
-    margin-top: 10px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    
 }
 
 .review-img{
@@ -306,6 +312,8 @@ h1 {
     font-family: 'Franklin Gothic Small', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+/* Горы */
 .mountains{
     width: 100%;
     margin-top: 30px;
