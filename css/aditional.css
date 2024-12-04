@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+
+.about-us-title-line{
+    background-color:rgb(78, 86, 86);
+}
+
+
+#about{
+    text-align: center;
+    font-size: 32px;
+    color: antiquewhite;
+    margin: 0px;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+#Near-the-river{
+    text-align: center;
+    font-size: 60px;
+    color: antiquewhite;
+    font-family: "Sour Gummy", sans-serif;
+    font-weight: 800;
+}
+
+
+.about-us-text{
+    background-color: rgb(42,42,42);
+    color: aliceblue;
+}
+
+.bg-image{
+    height: 500px;
+    background-image:url('../img/IMG_1466domik.JPG');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#slogan{
+    font-size: 2em;
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-weight: 600;
+    width: 100%;
+}
+
+#main-text{
+    width: 100%;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: 'Roboto';
+    font-size: 1.4em;
+
+    @media (min-width: 767px) and (max-width: 1199px){font-size: 1.3em;}
+    @media (max-width: 767px){
+        font-size: 1.1em;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    @media (max-width: 400px){
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 0.9em;
+    }
+}
