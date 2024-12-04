@@ -112,6 +112,7 @@ body {
 
 #img1, #img2, #img3, #img4 {
     width: 100%; 
+    max-width: 333.88px;
     height: 500px; 
     object-fit: cover; 
     border-radius: 10px;  /*Скруглила края смотрится побаще))) */
@@ -133,8 +134,9 @@ body {
     text-align: right 
 }
 
-.card img {
-    width: 390px;
+
+.card-img {
+    width: 100%;
 }
 
 .price{
@@ -158,8 +160,8 @@ body {
   
 .price, .btn, .details-btn{
     color: #eee;
+    border-radius: 4px;
 }
-
 
 
 
@@ -209,6 +211,7 @@ svg {
 .faq-container {
     width: 90%;
     border-radius: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -263,14 +266,16 @@ h1 {
     text-align: center
 }
 
+.faq-container a{
+    color:aliceblue;
+    text-decoration:overline;
+}
+
 
 /* Отзывы */
 .review{
     width: 60%;
 }
-
-
-
 
 .review-parent-container{
     padding-left: 10px;
@@ -393,9 +398,9 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8); /* полупрозрачный фон */
-  }
+}
   
-  .modal-content {
+.modal-content {
     background-color: #ffffff00;
     padding: 0; 
     border-radius: 0; 
@@ -408,48 +413,50 @@ h1 {
     justify-content: center;
     align-items: center;
     position: relative;
-  }
-  
-  .photos {
+}
+
+.photos {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     width: 90%; 
     height: 90%; 
-  }
-  
-  .main-photo {
+}
+
+.main-photo {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     border-radius: 0;
-  }
-  
-  .gallery-controls {
+}
+
+.gallery-controls {
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 50%;
     width: 100%;
     padding: 0 20px;
-  }
-  
-  .gallery-btn {
+}
+
+.gallery-btn {
     padding: 10px 20px;
+    padding-bottom: 12px;
     font-size: 24px;
-    background-color: #000;
+    background-color: transparent;
     color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
-  }
-  
-  .gallery-btn:hover {
+    height: 64px;
+}
+
+.gallery-btn:hover {
     background-color: #4c4c4c;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -457,12 +464,12 @@ h1 {
     cursor: pointer;
     color: #727171;
     z-index: 10;
-  }
+}
 
-  .textforbooking{
+.textforbooking{
     color: white;
     padding: 50px;
-  }
+}
 
 @media (min-width: 1200px){
 
@@ -515,8 +522,8 @@ h1 {
         font-size: 1.8em;
     }
 
-    .card img {
-        width: 390px;
+    .card-img {
+        width: 100%;
     }
 /* Окно фотографий */
     .modal {
@@ -535,12 +542,12 @@ h1 {
     .gallery-btn {
         padding: 10px 20px;
         font-size: 24px;
-        background-color: #000;
         color: white;
         border: none;
         border-radius: 50%;
         cursor: pointer;
         z-index: 10;
+        padding-bottom: 14px;
     }
       
     .gallery-btn:hover {
@@ -603,13 +610,8 @@ h1 {
         font-size: 1.2em; 
     }
 
-    .card{
-        padding-left: 4%;
-        padding-right: 4%;
-    }
-
-    .card img {
-        width: 250px;
+    .card-img {
+        width: 100%;
     }
 
 
@@ -631,12 +633,13 @@ h1 {
         
         padding: 10px 20px;
         font-size: 24px;
-        background-color: #000000ec;
+        background-color: transparent;
         color: white;
         border: none;
         border-radius: 50%;
         cursor: pointer;
         z-index: 10;
+        padding-bottom: 14px;
     }
 
     .close {
@@ -664,11 +667,9 @@ h1 {
 }
 
 @media (max-width: 767px){
-
-    
-
     .header h1 {
         font-size: 50px;
+        padding-right: 20px;
     }
     
     .all-headers{
@@ -677,6 +678,7 @@ h1 {
 
     .header p {
         font-size: 14px;
+        padding-right: 20px;
     }
 
     .parent{
@@ -694,7 +696,7 @@ h1 {
         position: relative;
         color:  #eee;
         text-align: right;
-        padding-right: 50px;
+        padding-right: 20px;
         margin-left: 20%;
         font-size: 14px;
     }
@@ -703,18 +705,13 @@ h1 {
         position: relative;
         color:  #eee;
         text-align: right;
-        padding-right: 50px;
+        padding-right: 20px;
         margin-left: 25%;
         font-size: 14px;
     }
 
-    .card{
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-
-    .card img {
-        width: 150px;
+    .card-img {
+        width: 100%;
     }
  /* Окно фотографий */
 
@@ -796,7 +793,7 @@ h1 {
         position: relative;
         color:  #eee;
         text-align: right;
-        padding-right: 50px;
+        padding-right: 20px;
         margin-left: 30%;
         margin-top: 10%;
         font-size: 13px;
@@ -807,8 +804,8 @@ h1 {
         color: transparent;
     }
 
-    .card img {
-        width: 150px;
+    .card-img {
+        width: 100%;
     }
 
     #image{

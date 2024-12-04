@@ -34,6 +34,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-width: 767px) and (max-width: 1000px){height: 450px;}
+    @media (max-width: 767px){height: 400px;}
+    @media (max-width: 400px){height: 350px;}
+
 }
 
 #slogan{

@@ -23,6 +23,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Darker+Grotesque:wght@300..900&family=Days+One&family=Dongle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
+    rel="stylesheet">
 
   <!-- Customized Bootstrap Stylesheet -->
   <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
@@ -99,7 +105,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="card col-xl-3 col-md-6 col-sm-12">
-          <img src="img/IMG_1479.JPG" alt="Маленький домик" id="img1" onclick="changeImg()">
+          <img class="card-img" src="img/IMG_1479.JPG" alt="Маленький домик" id="img1" onclick="changeImg()">
           <h3 class="textcolor">A small house for two</h3>
           <p class="price">25 000 тг</p>
           <button class="details-btn" data-room="room1">More detailed</button>
@@ -108,7 +114,7 @@
         </div>
 
         <div class="card col-xl-3 col-md-6 col-sm-12">
-          <img src="img/IMG_1480.JPG" alt="Большой домик" id="img2" onclick="changeImg2()">
+          <img class="card-img" src="img/IMG_1480.JPG" alt="Большой домик" id="img2" onclick="changeImg2()">
           <h3 class="textcolor">Large house for 4 people</h3>
           <p class="price">40 000 тг</p>
           <button class="details-btn" data-room="room2">More detailed</button>
@@ -117,7 +123,7 @@
         </div>
 
         <div class="card col-xl-3 col-md-6 col-sm-12">
-          <img src="img/DomikNa8.JPG" alt="Большой домик" id="img3" onclick="changeImg3()">
+          <img class="card-img" src="img/DomikNa8.JPG" alt="Большой домик" id="img3" onclick="changeImg3()">
           <h3 class="textcolor">Large house for 6 people</h3>
           <p class="price">55 000 тг</p>
           <button class="details-btn" data-room="room3">More detailed</button>
@@ -126,7 +132,7 @@
         </div>
 
         <div class="card col-xl-3 col-md-6 col-sm-12">
-          <img src="img/VesYchastok.JPG" alt="Большой домик" id="img4" onclick="changeImg4()">
+          <img class="card-img" src="img/VesYchastok.JPG" alt="Большой домик" id="img4" onclick="changeImg4()">
           <h3 class="textcolor">The whole plot is for 8 people</h3>
           <p class="price">80 000 тг</p>
           <button class="details-btn" data-room="room4">More detailed</button>
@@ -228,10 +234,12 @@
 
     <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
+
         <div class="carousel-item active">
+
           <div class="container-fluid review">
             <div class="row">
-              <div class="review-parent-container col-xl-6 col-md-6 col-sm-12">
+              <div class="review-parent-container col-xl-6 col-lg-6 col-md-12">
                 <div class="review-container">
                   <div class="review-img">
                     <img src="img/user2.png" alt="Большой домик" class="rev-img">
@@ -240,43 +248,51 @@
                   <div class="review-text"> детям понравилось, жена довольна, я выспался. Что еще надо для счастья? Приедем еще когда построят баньку с друганами отдыхать от жён.</div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="carousel-item">
-          <div class="container-fluid review">
-            <div class="row">
-              <div class="review-parent-container col-xl-6 col-md-6 col-sm-12">
+
+              <div class="review-parent-container col-xl-6 col-lg-6 d-none d-lg-block">
                 <div class="review-container">
                   <div class="review-img">
                     <img src="img/user2.png" alt="Большой домик" class="rev-img">
                   </div>
-                  <h3 class="textcolor review-name">Ахмет</h3>
+                  <h3 class="textcolor review-name">Антон</h3>
                   <div class="review-text"> детям понравилось, жена довольна, я выспался. Что еще надо для счастья? Приедем еще когда построят баньку с друганами отдыхать от жён.</div>
                 </div>
               </div>
+            
             </div>
           </div>
+
         </div>
 
         <div class="carousel-item">
+
           <div class="container-fluid review">
             <div class="row">
-              <div class="review-parent-container col-xl-6 col-md-6 col-sm-12">
+              <div class="review-parent-container col-xl-6 col-lg-6 col-md-12">
                 <div class="review-container">
                   <div class="review-img">
                     <img src="img/user2.png" alt="Большой домик" class="rev-img">
                   </div>
-                  <h3 class="textcolor review-name">ОЛЕГ</h3>
+                  <h3 class="textcolor review-name">Олег</h3>
                   <div class="review-text"> детям понравилось, жена довольна, я выспался. Что еще надо для счастья? Приедем еще когда построят баньку с друганами отдыхать от жён.</div>
                 </div>
               </div>
+
+              <div class="review-parent-container col-xl-6 col-lg-6 d-none d-lg-block">
+                <div class="review-container">
+                  <div class="review-img">
+                    <img src="img/user2.png" alt="Большой домик" class="rev-img">
+                  </div>
+                  <h3 class="textcolor review-name">Серёга</h3>
+                  <div class="review-text"> детям понравилось, жена довольна, я выспался. Что еще надо для счастья? Приедем еще когда построят баньку с друганами отдыхать от жён.</div>
+                </div>
+              </div>
+            
             </div>
           </div>
+
         </div>
 
-        
 
         <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -287,8 +303,8 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-
+    </div>
+  </div>      
   </br>
 
   <img src="img/mountain.PNG" alt="mountains" class="mountains">
